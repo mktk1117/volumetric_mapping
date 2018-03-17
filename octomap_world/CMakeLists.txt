@@ -22,6 +22,13 @@ cs_add_executable(octomap_manager
 )
 target_link_libraries(octomap_manager ${PROJECT_NAME})
 
+add_library(octomap_manager_nodelet SHARED src/octomap_manager_nodelet.cc)
+
+target_link_libraries(octomap_manager_nodelet
+  ${PROJECT_NAME}
+  ${catkin_LIBRARIES}
+)
+
 ##########
 # EXPORT #
 ##########

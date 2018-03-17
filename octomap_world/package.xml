@@ -25,4 +25,10 @@
   <depend>pcl_ros</depend>
   <depend>volumetric_map_base</depend>
   <depend>volumetric_msgs</depend>
+  <depend>nodelet</depend>
+
+  <export>
+    <nodelet plugin="${prefix}/nodelet_plugins.xml" />
+  </export>
+
 </package>

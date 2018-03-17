@@ -1,0 +1,16 @@
+<launch>
+	
+	<arg name="drone_name" default="taro" />
+	
+  <node pkg="octomap_world" name="$(arg drone_name)_octomap" type="octomap_manager" output="screen" >
+      <!-- <param name="tf_frame" value="world"/> -->
+      <param name="tf_frame" value="pico_flexx_optical_frame"/>
+      <param name="resolution" value="0.05"/>
+      <remap from="pointcloud" to="/pico_flexx/points"/>
+  </node>
+
+</launch>
+
+
+
+
